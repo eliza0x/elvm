@@ -143,6 +143,7 @@ ELC_SRCS := \
 	tcl.c \
 	tex.c \
 	tf.c \
+	tlhs.c \
 	tm.c \
 	unl.c \
 	vim.c \
@@ -503,6 +504,12 @@ TOOL := gosh
 include target.mk
 
 TARGET := hs
+RUNNER := tools/runhs.sh
+TOOL := ghc
+include target.mk
+$(OUT.eir.hs.out): tools/runhs.sh
+
+TARGET := tlhs
 RUNNER := tools/runhs.sh
 TOOL := ghc
 include target.mk

@@ -50,6 +50,7 @@ void target_swift(Module* module);
 void target_tcl(Module* module);
 void target_tex(Module* module);
 void target_tf(Module* module);
+void target_tlhs(Module* module);
 void target_tm(Module* module);
 void target_unl(Module* module);
 void target_vim(Module* module);
@@ -111,6 +112,7 @@ static target_func_t get_target_func(const char* ext) {
   if (!strcmp(ext, "tcl")) return target_tcl;
   if (!strcmp(ext, "tex")) return target_tex;
   if (!strcmp(ext, "tf")) return target_tf;
+  if (!strcmp(ext, "tlhs")) return target_tlhs;
   if (!strcmp(ext, "tm")) return target_tm;
   if (!strcmp(ext, "unl")) return target_unl;
   if (!strcmp(ext, "vim")) return target_vim;
